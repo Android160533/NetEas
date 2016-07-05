@@ -44,8 +44,20 @@ public class BlankFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+       //每个不同的Fragment加载不同的布局
+        View view=null;
+        if(num==1){
+            view=inflater.inflate(R.layout.fragment_blank,container,false);
+        }else if(num==2){
+            view=inflater.inflate(R.layout.fragment_blank2,container,false);
+        }else if(num==3){
+            view=inflater.inflate(R.layout.fragment_blank2,container,false);
+        }else if(num==4){
+            view=inflater.inflate(R.layout.fragment_blank2,container,false);
+        }else if(num==5){
+            view=inflater.inflate(R.layout.fragment_blank2,container,false);
+        }
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
