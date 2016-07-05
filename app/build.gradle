@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { jniLibs.srcDirs = ['libs'] } }
 }
 
 dependencies {
@@ -24,5 +25,12 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:support-v4:23.2.0'
+<<<<<<< HEAD
     compile 'com.android.support:design:23.2.0'
+=======
+    compile files('libs/Bmob_Push_V0.9beta_20160520.jar')
+    compile files('libs/BmobSDK_V3.4.7_0527.jar')
+    compile files('libs/okhttp-3.2.0.jar')
+    compile files('libs/okio-1.7.0.jar')
+>>>>>>> ecaca22e4d6f117a48f88b355c7d69ad6d1e4191
 }
