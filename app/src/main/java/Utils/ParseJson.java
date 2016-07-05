@@ -2,7 +2,7 @@ package Utils;
 
 import java.util.List;
 
-import bean.msg;
+import Bean.msg;
 
 /**
  * Created by Administrator on 16-7-4.
