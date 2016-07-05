@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="168dp">
+        <Button
+            android:drawableTop="@mipmap/login_icon"
+            android:layout_centerInParent="true"
+            android:text="立即登录"
+            android:textColor="#FFDFF2FF"
+            android:textSize="25dp"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_alignParentRight="true"
+            android:text="设置"
+            android:textColor="#FFDFF2FF"
+            android:background="@null"
+            android:drawableLeft="@mipmap/setting_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="68dp">
+        <Button
+            android:drawableTop="@mipmap/me_read_"
+            android:background="@null"
+            android:text="阅读"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:drawableTop="@mipmap/love_"
+            android:background="@null"
+            android:text="收藏"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:drawableTop="@mipmap/pan_"
+            android:background="@null"
+            android:text="跟帖"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@mipmap/gold_"
+            android:text="金币" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/mine_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
