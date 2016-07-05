@@ -9,15 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-public class MainActivity extends AppCompatActivity{
+import java.util.ArrayList;
+import java.util.List;
 
 import MyFragment.BlankFragment;
 import Myadapter.Fragment_adapter;
 
 public class MainActivity extends AppCompatActivity{
-    private List<Fragment>fragments;
+    private List<Fragment> fragments;
     private  ViewPager vp;
-    private RadioGroup rg;
+    private RadioGroup rg; //sfdsfsd
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
