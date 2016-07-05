@@ -17,7 +17,7 @@ import Myadapter.Fragment_adapter;
 public class MainActivity extends AppCompatActivity{
     private List<Fragment>fragments;
     private  ViewPager vp;
-    private RadioGroup rg;
+    private RadioGroup rg;  //jjjj
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
