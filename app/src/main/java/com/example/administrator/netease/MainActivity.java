@@ -1,11 +1,12 @@
 package com.example.administrator.netease;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,33 +15,74 @@ import MyFragment.BlankFragment;
 import Myadapter.Fragment_adapter;
 
 public class MainActivity extends AppCompatActivity{
-    String[] urls=new String[]{};
-    private String[] titles;
     private List<Fragment>fragments;
     private  ViewPager vp;
-    private TabLayout tabLayout;
+    private RadioGroup rg;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        vp=(ViewPager) findViewById(R.id.vp);
-        tabLayout=(TabLayout) findViewById(R.id.tablayout);
+        vp=(ViewPager) findViewById(R.id.mainvp);
+        vp.requestDisallowInterceptTouchEvent(false);
+        rg=(RadioGroup)findViewById(R.id.rg);
         fragments=new ArrayList<>();
         initView();
+        initdata();
+    }
+
+    private void initdata(){
+        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
+            }
+
+            @Override
+            public void onPageSelected(int position){
+                RadioButton rb= (RadioButton) rg.getChildAt(position);
+                rb.setChecked(true);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state){
+            }
+        });
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId){
+                int position=-1;
+                switch(checkedId){
+                    case R.id.one:
+                        position=0;
+                        break;
+                    case R.id.two:
+                        position=1;
+                        break;
+                    case R.id.three:
+                        position=2;
+                        break;
+                    case R.id.four:
+                        position=3;
+                        break;
+                    case R.id.five:
+                        position=4;
+                        break;
+                }
+                if(position!=-1){
+                    vp.setCurrentItem(position);
+                }
+            }
+        });
     }
 
     private void initView(){
-      titles=new String[]{"头条","娱乐","热点","体育","财经","科技","汽车",
-              "时尚","图片","轻松一刻","段子","军事","历史","家居","独家","游戏","健康",
-              "政务","漫画","哒哒趣闻","彩票","美女"};
-        for(int i = 0; i <titles.length; i++){
+
+        for(int i = 0; i <rg.getChildCount(); i++){
             BlankFragment blankfragment=BlankFragment.newInstance((i+1),"");
             fragments.add(blankfragment);
         }
-        Fragment_adapter ad=new Fragment_adapter(getSupportFragmentManager(),titles,fragments);
+        Fragment_adapter ad=new Fragment_adapter(getSupportFragmentManager(),fragments);
         vp.setAdapter(ad);
-        tabLayout.setupWithViewPager(vp);
     }
 }

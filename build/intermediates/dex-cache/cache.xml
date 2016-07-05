@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="F:\studio\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.0\support-annotations-23.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.0_206faed7141eaa1bbefdce2261ce696e6b624ffc\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.2.0_47ed72f4a1d6f9271216b06058bd8d325523d48d\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.0_476babba4b9a5aa9d2b8ebfc0dd44aec81ab8f81\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\libs\BmobSDK_V3.4.7_0527.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8667f5dc9bdebc29f5ae64595265539023d1cf63">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\2\BmobSDK_V3.4.7_0527_5f37914ad626a287c495e8542486cb8287842723\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.0_bbe3931721d55471cc35ace77070b49797f73c48\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.0_87bc2ef160b7fb45279ab8b1ea090dd4b651bea9\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\libs\okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\2\okhttp-3.2.0_563d1c9114b422294718ac7def64d4fbf458d1f1\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="268ce3e17222aa6377df1a4f5787c32090de4649">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_43266fae6464ea6503e4ab1fd6c88c60f1401b9b\classes.dex" />
+    </item>
+    <item
+        jar="F:\com\NetEas\app\build\intermediates\exploded-aar\com.android.support\design\23.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
+        <dex dex="F:\com\NetEas\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.2.0_fd3688913d27b382c3eb5009b57ea65f5eeb166d\classes.dex" />
+    </item>
+
+</items>
