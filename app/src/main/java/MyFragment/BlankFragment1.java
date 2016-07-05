@@ -2,90 +2,59 @@ package MyFragment;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.administrator.netease.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import Myadapter.Title_adapter;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BlankFragment.OnFragmentInteractionListener} interface
+ * {@link BlankFragment1.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BlankFragment#newInstance} factory method to
+ * Use the {@link BlankFragment1#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment extends Fragment{
-
+public class BlankFragment1 extends Fragment{
 
     private OnFragmentInteractionListener mListener;
     private ViewPager vp;
-    private TabLayout tablayout;
+    private SwipeRefreshLayout srf;
+    private RecyclerView recyclerView;
 
-    public static BlankFragment newInstance(int index, String param2){
-        BlankFragment fragment = new BlankFragment();
+    public static BlankFragment1 newInstance(int index){
+        BlankFragment1 fragment = new BlankFragment1();
         Bundle args = new Bundle();
         args.putInt("index", index);
-        args.putString("urls", param2);
         fragment.setArguments(args);
         return fragment;
     }
-    int num;
-    String url;
+    int index;
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         if(getArguments() != null){
-            num = getArguments().getInt("index");
-            url = getArguments().getString("urls");
+            index = getArguments().getInt("index");
+
         }
     }
-    View view;
-    String[]titles;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-       //每个不同的Fragment加载不同的布局
-        view=null;
-        if(num==1){
-            view=inflater.inflate(R.layout.fragment_blank,container,false);
-        }else if(num==2){
-            view=inflater.inflate(R.layout.fragment_blank2,container,false);
-        }else if(num==3){
-            view=inflater.inflate(R.layout.fragment_blank2,container,false);
-        }else if(num==4){
-            view=inflater.inflate(R.layout.fragment_blank2,container,false);
-        }else if(num==5){
-            view=inflater.inflate(R.layout.fragment_blank2,container,false);
-        }
+        recyclerView = (RecyclerView) container.findViewById(R.id.recyclerview1);
         initview();
-        return view;
+        return inflater.inflate(R.layout.fragment1, container, false);
     }
-    List<Fragment>fragments;
+
     private void initview(){
-        if(num==1){
-            tablayout=(TabLayout)view.findViewById(R.id.tablayout);
-            fragments=new ArrayList<>();
-            vp = (ViewPager) view.findViewById(R.id.vp);
-            titles=new String[]{"头条","娱乐","热点","体育","财经","科技","汽车",
-                    "时尚","图片","轻松一刻","段子","军事","历史","家居","独家","游戏","健康",
-                    "政务","漫画","哒哒趣闻","彩票","美女"};
-            for(int i = 0; i <titles.length ; i++){
-                BlankFragment1 fragment=BlankFragment1.newInstance((i+1));
-                fragments.add(fragment);
-            }
-            Title_adapter ad=new Title_adapter(getFragmentManager(),titles,fragments);
-            vp.setAdapter(ad);
-            tablayout.setupWithViewPager(vp);
-        }
+        LinearLayoutManager manager=new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(manager);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -95,7 +64,7 @@ public class BlankFragment extends Fragment{
         }
     }
 
-  /*  @Override
+ /*   @Override
     public void onAttach(Context context){
         super.onAttach(context);
         if(context instanceof OnFragmentInteractionListener){

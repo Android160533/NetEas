@@ -1,6 +1,5 @@
 package com.example.administrator.netease;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -16,14 +15,14 @@ import MyFragment.BlankFragment;
 import Myadapter.Fragment_adapter;
 
 public class MainActivity extends AppCompatActivity{
-    private List<Fragment> fragments;
+ 
+    private List<Fragment>fragments;
     private  ViewPager vp;
-    private RadioGroup rg; //sfdsfsd
+    private RadioGroup rg;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(this,LoginActivity.class));
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         vp=(ViewPager) findViewById(R.id.mainvp);
