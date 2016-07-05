@@ -1,4 +1,4 @@
-package Bean;
+package bean;
 
 /**
  * Created by Administrator on 16-7-4.

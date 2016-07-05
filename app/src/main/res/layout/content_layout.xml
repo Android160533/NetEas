@@ -10,12 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/holo_red_light"></android.support.v7.widget.Toolbar>
-    <android.support.design.widget.TabLayout
-        app:tabTextColor="#1aff01"
-        app:tabMode="scrollable"
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        app:tabSelectedTextColor="@android:color/holo_red_light"></android.support.design.widget.TabLayout>
+
 
 </LinearLayout>
