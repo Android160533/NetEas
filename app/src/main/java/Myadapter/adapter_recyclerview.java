@@ -7,13 +7,13 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import bean.msg;
+import Bean.msg;
 
 /**
  * Created by Administrator on 16-7-4.
  */
 public class adapter_recyclerview extends RecyclerView.Adapter{
-    private List<bean.msg>list;
+    private List<Bean.msg>list;
     private Context context;
     private LayoutInflater inflater;
 

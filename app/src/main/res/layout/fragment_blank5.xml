@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="168dp">
         <Button
+            android:id="@+id/my_login"
             android:drawableTop="@mipmap/login_icon"
             android:layout_centerInParent="true"
             android:text="立即登录"

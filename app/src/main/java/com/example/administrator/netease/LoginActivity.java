@@ -3,7 +3,6 @@ package com.example.administrator.netease;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,8 +19,6 @@ public class LoginActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toorbar_login);
-        setSupportActionBar(toolbar);
         initView();
     }
 
@@ -46,6 +43,10 @@ public class LoginActivity extends AppCompatActivity{
             @Override
             public void success(String s){
                 //登录成功，返回的数据时登录时输入的账号
+                Intent intent = new Intent();
+                intent.putExtra("username",s);
+                setResult(1,intent);
+                finish();
             }
         });
     }

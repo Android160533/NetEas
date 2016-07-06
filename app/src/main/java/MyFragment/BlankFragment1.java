@@ -35,25 +35,27 @@ public class BlankFragment1 extends Fragment{
         fragment.setArguments(args);
         return fragment;
     }
+
     int index;
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         if(getArguments() != null){
             index = getArguments().getInt("index");
-
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        recyclerView = (RecyclerView) container.findViewById(R.id.recyclerview1);
+        View view = inflater.inflate(R.layout.fragment1, container, false);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview1);
         initview();
-        return inflater.inflate(R.layout.fragment1, container, false);
+        return view;
     }
 
     private void initview(){
-        LinearLayoutManager manager=new LinearLayoutManager(getContext());
+        LinearLayoutManager manager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(manager);
     }
 
